@@ -1,6 +1,18 @@
 #!/bin/sh
 
 zshrc() {
+
+    echo "==========================================================="
+    echo "             checking for oh-my-zsh                   "
+    echo "-----------------------------------------------------------"
+    if [ ! -f "$ZSH/oh-my-zsh.sh" ]; then
+        echo "==========================================================="
+        echo "             installing oh-my-zsh                   "
+        echo "-----------------------------------------------------------"
+        sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    fi
+
+
     echo "==========================================================="
     echo "             cloning zsh-autosuggestions                   "
     echo "-----------------------------------------------------------"
